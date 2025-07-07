@@ -26,3 +26,19 @@ EXPOSE 8000
 
 # 7. Comando para iniciar o servidor com Gunicorn (app.py)
 CMD ["gunicorn", "app:app", "--bind", "192.168.80.54:8000"]
+
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    gcc \
+    libffi-dev \
+    libssl-dev \
+    python3-dev \
+    libjpeg-dev \
+    zlib1g-dev \
+    libfreetype6-dev \
+    liblcms2-dev \
+    libwebp-dev \
+    tcl-dev \
+    tk-dev \
+    && rm -rf /var/lib/apt/lists/*
+
