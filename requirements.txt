@@ -42,5 +42,6 @@ wsproto==1.2.0
 zope.event==5.0
 zope.interface==7.2
 reportlab==4.1.0
-flask_mirage
+Flask-Migrate==4.0.5
+
 pytz
