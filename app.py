@@ -18,7 +18,7 @@ app.secret_key = "chave_secreta"
 load_dotenv()
 
 # Configuração do SQLite
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///meus_chamados.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 
