@@ -8,9 +8,14 @@ from io import BytesIO
 from datetime import datetime
 import pytz  # Importando a biblioteca pytz
 from flask_migrate import Migrate
+from dotenv import load_dotenv
+import os
 
 app = Flask(__name__)
 app.secret_key = "chave_secreta"
+
+# Carrega variáveis de ambiente do .env
+load_dotenv()
 
 # Configuração do SQLite
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///meus_chamados.db"
