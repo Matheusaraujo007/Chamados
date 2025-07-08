@@ -278,5 +278,6 @@ def export_pdf_status(status):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='192.168.80.54', port=8080)
+
 
